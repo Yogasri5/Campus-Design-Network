@@ -1,85 +1,14 @@
 # Campus-Design-Network
-This project presents a comprehensive network topology design for Albion University, a large university with two campuses located 20 miles apart. The network infrastructure has been designed using Cisco Packet Tracer, following best practices in hierarchical network architecture and ensuring scalability, security, and efficient communication across departments and faculties.
+Vignan University is a large university which has two campuses situated 20 miles apart. The university’s students and staff are distributed in 4 faculties; these include the faculties of Health and Sciences; Business; Engineering/Computing and Art/Design. Each member of staff has a PC and students have access to PCs in the labs. Create a network topology with the main components to support the following:
+University location.
+## **Main Campus**
+- Building A: Administrative staff in the departments of management, HR and finance. The admin staff PCs are distributed in the building offices and it is expected that they will share some networking equipment (Hint: use of VLANs is expected here). The Faculty of Business is also situated in this building
+- Building B: Faculty of Engineering and Computing and Faculty of Art and Design.
+- Building C: Students’ labs and IT department. The IT department hosts the University Web server and other servers - There is also an email server hosted externally on the cloud.
+## **Smaller campus:**
+Faculty of Health and Sciences (staff and students’ labs are situated on separate floors)
 
-## 🏫 Project Overview
-The university comprises two campuses:
-
-### 🔹 **Main Campus**:
-
-#### **Building A**:
-
-Administrative Departments: Management, HR, Finance,
-Faculty of Business,
-Use of VLANs for departmental segregation,
-Router-based DHCP server for dynamic IP assignment.
-
-#### **Building B**:
-
-Faculty of Engineering and Computing,
-Faculty of Art and Design.
-
-#### **Building C**:
-
-Student Labs,
-IT Department (hosts internal university servers including the Web Server),
-External Cloud-based Email Server connectivity.
-
-
-
-### 🔹 **Smaller Campus**:
-Faculty of Health and Sciences,
-Staff and student labs located on separate floors,
-Separate IP networks.
-
-#### ⚙️ **Technologies Implemented**:
-
-💡 Cisco Packet Tracer Simulation  
-💡 Hierarchical Network Design  
-💡 Proper Device Cabling (Straight-through, Crossover, Console)  
-💡 VLAN Configuration & Port Assignment  
-💡 Inter-VLAN Routing (Router-on-a-Stick)  
-💡 Subnetting & IP Addressing (Each Faculty/Dept on Separate Subnets)  
-💡 DHCP Configuration (Router as DHCP Server)  
-💡 SSH Configuration for Secure Remote Access  
-💡 RIPv2 Routing for Internal Network  
-💡 Static Routing for Cloud-based Email Server  
-💡 Switch Port Security (MAC Binding, Port Shutdown on Violation)  
-💡 Host Device Configuration and Testing  
-💡 End-to-End Connectivity Verification (Ping, SSH, Web Server)  
-
-#### 📌 **Testing And Verification**:
-
-🧪 All VLANs tested for intra-VLAN and inter-VLAN connectivity  
-🧪 DHCP working in Building A  
-🧪 Successful SSH connections to network devices  
-🧪 Web server reachable from any faculty  
-🧪 Port-security in place to mitigate unauthorized access  
-🧪 Cloud email server reachable via static route  
-
-
-### 🗂️ **Files Included**:
-.pkt file (Cisco Packet Tracer project file)
-
-Configuration notes or device CLI outputs (optional)
-
-Subnetting and IP allocation documentation
-
-### 🔐 **Security Measures**:
-Inter-VLAN routing with access controls
-
-SSH-enabled remote access
-
-Port-security to prevent MAC flooding or rogue devices
-
-Router passwords and console protections
-
-### 🏁 **How to Use**:
-Open the .pkt file in Cisco Packet Tracer 8.x
-
-Start the simulation or real-time mode
-
-Use console access or CLI to review configuration
-
-Test connectivity (ping, web browser, SSH)
-
-Modify or expand based on new requirements
+Each department/faculty is expected to be on its own separate IP network.
+The switches should be configured with appropriate VLANs and security settings.
+RIPv2 will be used to provide routing for the routers in the internal network and static routing for the external server.
+The devices in building A will be expected to acquire dynamic IP addresses from a router-based DHCP server.
